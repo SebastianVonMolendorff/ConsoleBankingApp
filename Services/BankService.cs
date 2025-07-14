@@ -1,4 +1,4 @@
-﻿using BankingApp.Data;
+using BankingApp.Data;
 using BankingApp.Models;
 using System;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ namespace BankingApp.Services
 
             _accounts.Add(account);
             DataStore.SaveAccounts(_accounts);
-            Console.WriteLine($"\n✅ Account created! Your account number is: {accNumber}");
+            Console.WriteLine($" Account created! Your account number is: {accNumber}");
         }
 
         public BankAccount Login()
@@ -46,11 +46,11 @@ namespace BankingApp.Services
 
             if (account != null)
             {
-                Console.WriteLine("\n✅ Login successful!");
+                Console.WriteLine("Login successful!");
                 return account;
             }
 
-            Console.WriteLine("❌ Invalid credentials.");
+            Console.WriteLine("Invalid credentials.");
             return null;
         }
 
@@ -94,7 +94,7 @@ namespace BankingApp.Services
                         }
                         else
                         {
-                            Console.WriteLine("📄 Transaction History:");
+                            Console.WriteLine("Transaction History:");
                             foreach (var t in account.Transactions)
                             {
                                 Console.WriteLine($"{t.Date:dd/MM/yyyy HH:mm} | {t.Type} | R{t.Amount} | Balance: R{t.BalanceAfter}");
@@ -123,7 +123,7 @@ namespace BankingApp.Services
             string recipientAccNumber = InputHelper.ReadAccountNumber();
             if (recipientAccNumber == sender.AccountNumber)
             {
-                Console.WriteLine("❌ Cannot transfer to the same account.");
+                Console.WriteLine("Cannot transfer to the same account.");
                 return;
             }
 
@@ -131,7 +131,7 @@ namespace BankingApp.Services
 
             if (recipient == null)
             {
-                Console.WriteLine("❌ Recipient account not found.");
+                Console.WriteLine("Recipient account not found.");
                 return;
             }
 
@@ -139,7 +139,7 @@ namespace BankingApp.Services
 
             if (sender.Balance < amount)
             {
-                Console.WriteLine("❌ Insufficient funds.");
+                Console.WriteLine("Insufficient funds.");
                 return;
             }
 
@@ -151,7 +151,7 @@ namespace BankingApp.Services
 
             DataStore.SaveAccounts(_accounts);
 
-            Console.WriteLine($"✅ Successfully transferred R{amount} to account {recipient.AccountNumber}.");
+            Console.WriteLine($"Successfully transferred R{amount} to account {recipient.AccountNumber}.");
         }
 
         private string GenerateUniqueAccountNumber()
