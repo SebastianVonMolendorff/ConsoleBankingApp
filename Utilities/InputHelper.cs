@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,7 @@ namespace BankingApp.Utilities
                 input = Console.ReadLine()?.Trim();
                 if (string.IsNullOrWhiteSpace(input))
                 {
-                    Console.WriteLine("❌ Input cannot be empty. Try again.");
+                    Console.WriteLine("Input cannot be empty. Try again.");
                 }
             } while (string.IsNullOrWhiteSpace(input));
             return input;
@@ -32,7 +32,7 @@ namespace BankingApp.Utilities
                 string input = Console.ReadLine();
                 if (!decimal.TryParse(input, out value) || value <= 0)
                 {
-                    Console.WriteLine("❌ Enter a valid positive number.");
+                    Console.WriteLine("Enter a valid positive number.");
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace BankingApp.Utilities
                 string input = Console.ReadLine();
                 if (!int.TryParse(input, out value) || value < min || value > max)
                 {
-                    Console.WriteLine($"❌ Please enter a number between {min} and {max}.");
+                    Console.WriteLine($"Please enter a number between {min} and {max}.");
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace BankingApp.Utilities
                 input = Console.ReadLine()?.Trim();
                 if (input.Length != 6 || !input.All(char.IsDigit))
                 {
-                    Console.WriteLine("❌ Account number must be exactly 6 digits.");
+                    Console.WriteLine("Account number must be exactly 6 digits.");
                 }
                 else
                 {
