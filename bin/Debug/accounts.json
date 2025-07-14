@@ -1,0 +1,59 @@
+[
+  {
+    "AccountNumber": "148327",
+    "AccountHolder": "seb",
+    "Password": "1234",
+    "Balance": 0,
+    "Transactions": []
+  },
+  {
+    "AccountNumber": "889767",
+    "AccountHolder": "seb",
+    "Password": "1234",
+    "Balance": 0,
+    "Transactions": []
+  },
+  {
+    "AccountNumber": "585315",
+    "AccountHolder": "sebastian",
+    "Password": "2124",
+    "Balance": 0,
+    "Transactions": []
+  },
+  {
+    "AccountNumber": "742083",
+    "AccountHolder": "Megan",
+    "Password": "veer1234",
+    "Balance": 0,
+    "Transactions": []
+  },
+  {
+    "AccountNumber": "297882",
+    "AccountHolder": "Sebastian von Molendorff",
+    "Password": "2124",
+    "Balance": 50000,
+    "Transactions": []
+  },
+  {
+    "AccountNumber": "541553",
+    "AccountHolder": "Sebastian von Molendorff",
+    "Password": "2124",
+    "Balance": 120000,
+    "Transactions": [
+      {
+        "Date": "0001-01-01T00:00:00",
+        "Type": null,
+        "Amount": 20000,
+        "BalanceAfter": 0,
+        "Note": null
+      }
+    ]
+  },
+  {
+    "AccountNumber": "461311",
+    "AccountHolder": "Jermile Pietersen",
+    "Password": "1234",
+    "Balance": 40000,
+    "Transactions": []
+  }
+]
